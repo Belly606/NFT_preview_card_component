@@ -1,0 +1,170 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	font-family: 'Outfit', sans-serif;
+	background-color: hsl(217, 54%, 11%);
+	display: grid;
+	place-items: center;
+}
+main {
+	width: 450px;
+	background-color: hsl(216, 50%, 16%);
+	padding: 1.5em;
+	border-radius: 0.9em;
+	-webkit-border-radius: 0.9em;
+	-moz-border-radius: 0.9em;
+	-ms-border-radius: 0.9em;
+	-o-border-radius: 0.9em;
+}
+@media (width: 375px) {
+	main {
+		max-width: 355px;
+		margin: 0 10px;
+	}
+}
+main .image {
+	position: relative;
+	margin-bottom: 1.5em;
+	width: 400px;
+	overflow: hidden;
+	transition: 0.7s ease;
+	border-radius: 0.9em;
+	-webkit-border-radius: 0.9em;
+	-moz-border-radius: 0.9em;
+	-ms-border-radius: 0.9em;
+	-o-border-radius: 0.9em;
+	-webkit-transition: 0.7s ease;
+	-moz-transition: 0.7s ease;
+	-ms-transition: 0.7s ease;
+	-o-transition: 0.7s ease;
+}
+@media (width: 375px) {
+	main .image {
+		width: 315px;
+	}
+}
+main .image:hover {
+	cursor: pointer;
+}
+main .image::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: hsl(178, 100%, 50%);
+	opacity: 0;
+	transition: 0.7s ease;
+	-webkit-transition: 0.7s ease;
+	-moz-transition: 0.7s ease;
+	-ms-transition: 0.7s ease;
+	-o-transition: 0.7s ease;
+}
+main .image::after {
+	content: "\f06e";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 3.5em;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: 0.7s ease;
+}
+main .image:hover::before {
+	opacity: 0.5;
+}
+main .image:hover::after {
+	opacity: 1;
+}
+main .image img {
+	display: block;
+	width: 100%;
+}
+main .text h3 {
+	color: white;
+	margin-bottom: 1.5em;
+	transition: 0.4s ease;
+	-webkit-transition: 0.4s ease;
+	-moz-transition: 0.4s ease;
+	-ms-transition: 0.4s ease;
+	-o-transition: 0.4s ease;
+}
+main .text h3:hover {
+	cursor: pointer;
+	color: hsl(178, 100%, 50%);
+}
+main .text > p {
+	color: hsl(215, 51%, 70%);
+	font-size: 1.6em;
+	font-weight: 300;
+	line-height: 1.4em;
+}
+main .text .info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 1.5em 0;
+}
+main .text .info div {
+	display: flex;
+	align-items: center;
+	gap: .5em;
+}
+main .text .info .price p {
+	color: hsl(178, 100%, 50%);
+	font-weight: bold;
+}
+main .text .info .time p {
+	color: hsl(215, 51%, 70%);
+}
+main hr {
+	border: none;
+	height: 2px;
+	background-color: hsl(215, 32%, 27%);
+}
+main footer {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	padding-top: 1.5em;
+}
+main footer img {
+	width: 2.5em;
+	outline: 2px solid white;
+	border-radius: 50%;
+}
+main footer p {
+	color: hsl(215, 51%, 70%);;
+}
+main footer p span {
+	color: white;
+	transition: 0.7s ease;
+	-webkit-transition: 0.7s ease;
+	-moz-transition: 0.7s ease;
+	-ms-transition: 0.7s ease;
+	-o-transition: 0.7s ease;
+}
+main footer p span:hover {
+	color: hsl(178, 100%, 50%);
+	cursor: pointer;
+}
+.attribution {
+	position: absolute;
+	top: 96vh;
+	color: white;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	font-weight: bold;
+	text-decoration: none;
+	color: hsl(178, 100%, 50%);
+}
